@@ -27,6 +27,12 @@ describe('Calculator', () => {
     expect(calculator.value).toBe(3);
   });
 
+  it('add shuld throw an error if value is grater than 100', () => {
+    expect(() => {
+      calculator.add(101);
+    }).toThrow('Value can not be greater than 100');
+  });
+
   it('subtract', () => {
     calculator.set(1);
     calculator.subtract(2);
@@ -49,6 +55,12 @@ describe('Calculator', () => {
       calculator.set(1);
       calculator.divide(0);
       expect(calculator.value).toBe(Infinity);
+    });
+
+    it('4 / 4 === 1', () => {
+      calculator.set(4);
+      calculator.divide(4);
+      expect(calculator.value).toBe(1);
     });
   });
 });
