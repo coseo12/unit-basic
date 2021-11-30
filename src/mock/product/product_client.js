@@ -6,4 +6,4 @@ class ProductClient {
   }
 }
 
-module.exports = productClient;
+module.exports = ProductClient;
