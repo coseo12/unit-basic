@@ -41,8 +41,8 @@ describe('Stack', () => {
     it('returns the last pushed item and removes it from the stack', () => {
       stack.push('🍌');
       stack.push('🥛');
-      expect(stack.pop()).toBe('🥛');
-      expect(stack.size()).toBe(1);
+      expect(stack.peek()).toBe('🥛');
+      expect(stack.size()).toBe(2);
     });
   });
 });
